@@ -1,5 +1,3 @@
-All experiments are performed on an i9-13900F CPU. The total time cost is about 75 min.
-
 ## Usage
 
 Install kerpy (a package adapted from https://github.com/oxcsml/kerpy)
