@@ -33,7 +33,7 @@ for distribution in ['laplace', 'uniform']:
         
         weight_CM_true = np.array(weight_CM_true)
         weight_CM_pred = np.array(weight_CM_pred)
-        error_CM = np.abs((weight_CM_true - weight_CM_pred) / weight_CM_true)
+        error_CM = np.abs((weight_CM_true - weight_CM_pred)) / np.maximum(np.abs(weight_CM_true), np.abs(weight_CM_pred))
         mean, std = performance(error_CM)
         results[0].append(mean)
         results[1].append(std)
