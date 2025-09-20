@@ -24,7 +24,6 @@ for distribution in ['laplace', 'uniform']:
         results = [[], []] # mean, std
         for n_samples in samples_list:
             weight_GRICA_pred, weight_GRICA_true = [], []
-            weight_CM_pred, weight_CM_true = [], []
             for seed in range(100):
                 data, g, weights, w_id = generate_data(graph, n_samples=n_samples, distribution=distribution, latent=latent, observed=observed, seed=seed)
                 #GRICA
