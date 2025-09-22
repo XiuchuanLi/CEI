@@ -2,6 +2,7 @@ import torch
 import numpy as np
 import networkx as nx
 
+
 def generate_data(id, n_samples=1000, distribution='laplace', latent=1, observed=3, seed=0):
     if id == 'a':
         iv_adj = np.array([[0, 1, 1, 1], [0, 0, 0, 0], [0, 0, 0, 1], [0, 0, 0, 0]])

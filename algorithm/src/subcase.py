@@ -1,5 +1,5 @@
 import numpy as np
-from src.utils import candidates, ind_constraint, cum31, cum22
+from src.utils import candidates, ind_constraint, cum31, cum22, independence
 
 
 def TestCase(T, O, Z):
@@ -40,7 +40,10 @@ def CalCase(T, O, Z, case):
     
     def perfect(T, O, Z):
         if cum31(T, Z) / cum31(Z, T) > 0:
-            ratio = np.sign(np.cov(T,Z)[0,1]) * np.sqrt(cum31(T, Z) / cum31(Z, T))
+            ratio1 = np.sign(np.cov(T,Z)[0,1]) * np.sqrt(cum31(T, Z) / cum31(Z, T))
+            ratio2 = cum31(T, Z) / cum22(T, Z)
+            ratio3 = cum22(T, Z) / cum31(Z, T)
+            ratio = np.median([ratio1, ratio2, ratio3])
         else:
             ratio1 = cum31(T, Z) / cum22(T, Z)
             ratio2 = cum22(T, Z) / cum31(Z, T)

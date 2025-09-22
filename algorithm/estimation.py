@@ -30,4 +30,5 @@ for distribution in ['laplace', 'uniform']:
             results[1].append(std)
             print(f'{n_samples}: {mean:.2f}±{std:.2f}')
         print('\n')
-        np.save(f'data/ours_{distribution}_{graph}.npy', results)
+        np.save(f'data/{distribution}_{graph}_estimation.npy', results)
+

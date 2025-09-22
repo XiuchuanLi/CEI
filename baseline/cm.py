@@ -38,4 +38,4 @@ for distribution in ['laplace', 'uniform']:
         results[0].append(mean)
         results[1].append(std)
         print(f'{n_samples}: {mean:.2f}±{std:.2f}')
-    np.save(f'data/cm_{distribution}_a.npy', results)
+    np.save(f'data/cm_{distribution}_a_estimation.npy', results)

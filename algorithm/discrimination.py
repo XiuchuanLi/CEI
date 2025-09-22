@@ -7,13 +7,12 @@ if not os.path.exists('data'):
     os.mkdir('data')
 
 # configuration of data
-latent, observed = 1, 3
 samples_list = [500,1000,2000,5000,10000,15000,20000,25000]
 
-
+latent, observed = 1, 3
 for distribution in ['laplace', 'uniform']:
     results = []
-    for graph in ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']:
+    for graph in ['a', 'b', 'c', 'd', 'e', 'f']:
         print(distribution, 'Fig. 3(', graph, ')')
         results.append([])
         for n_samples in samples_list:
@@ -27,4 +26,3 @@ for distribution in ['laplace', 'uniform']:
             results[-1].append(1 - correct / 100)
         print(['sample size:erro',] + [f'{i}:{j:.2f}' for (i, j) in zip(samples_list, results[-1])]) # (sample size, error)
     np.save(f'data/{distribution}_discrimination.npy', results)
-

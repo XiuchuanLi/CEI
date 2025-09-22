@@ -40,7 +40,7 @@ def cross_moment(Z, D, Y, deg=2):
         deg += 1
     return numerator / denominator
 
-
+    
 # Remark: data - before withening
 def init_w_guess_(data, g, latent, observed):
     up_data = data.t()
