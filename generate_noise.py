@@ -3,12 +3,13 @@ from algorithm.src.utils import independence
 
 
 def SelectPdf(Num,data_type):
-    if data_type == "uniform":
-        noise = np.random.uniform(-1, 1, size=Num)
 
-    elif data_type == "laplace":
+    if data_type == "laplace":
         noise =np.random.laplace(0, 1, size=Num)
 
+    elif data_type == "beta":
+        noise = np.random.beta(0.4, 0.6, size=Num)
+    
     else: #gauss
         noise = np.random.normal(0, 1, size=Num)
 
@@ -21,7 +22,7 @@ def normalize(data):
     return data
 
 
-for distribution in ['laplace', 'uniform']:
+for distribution in ['laplace', 'beta']:
     for Num in [500,1000,2000,5000,10000,15000,20000,25000]:
         noises = []
         for i in range(10):
