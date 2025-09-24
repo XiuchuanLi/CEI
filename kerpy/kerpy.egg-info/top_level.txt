@@ -1,3 +1,0 @@
-independence_testing
-kerpy
-tools
