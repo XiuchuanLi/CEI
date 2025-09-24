@@ -8,7 +8,7 @@ python setup.py develop
 cd ..
 ```
 
-Reproduce the results in Fig. 6.
+Causal structure discrimination (Figs. 6, 10, and 13)
 
 ```(bash)
 cd algorithm
@@ -16,20 +16,11 @@ python discrimination.py
 cd ..
 ```
 
-Reproduce the results of our algorithm in Fig. 7.
+Causal effect estimation (Figs. 7 and 12)
 
 ```(bash)
 cd algorithm
 python estimation.py
-cd ..
-```
-
-Reproduce the results of baselines (CM and GRICA) in Fig. 7.
-
-```(bash)
-cd baseline
-python cm.py
-python grica.py
 cd ..
 ```
 
